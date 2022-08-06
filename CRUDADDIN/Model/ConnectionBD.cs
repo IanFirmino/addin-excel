@@ -22,17 +22,23 @@ namespace CRUDADDIN.Model
         }
         public static void ExecuteSql(string Sql)
         {
+            OpenConnect();
+
             SqlCommand cmd = new SqlCommand(Sql);
             cmd.ExecuteNonQuery();
         }
         public static SqlDataReader DataReader (string Sql)
         {
+            OpenConnect();
+
             SqlCommand cmd = new SqlCommand(Sql, con);
             SqlDataReader dr = cmd.ExecuteReader();
             return dr;
         }
         public static object SqlScalar(string Sql)
         {
+            OpenConnect();
+
             SqlDataAdapter dr = new SqlDataAdapter(Sql, con);
             DataSet ds = new DataSet();
             dr.Fill(ds);

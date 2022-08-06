@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace CRUDADDIN.Controller
 {
-    public class Requisicoes
+    public static class Requisicoes
     {
-        public string ConectarBanco()
+        public static string ConectarBanco()
         {
             string stringConection = "Data Source=SUPER_PC\\SQLEXPRESS;Initial Catalog=Treinamentos; Integrated Security=true;";
 
@@ -26,7 +26,7 @@ namespace CRUDADDIN.Controller
             }
         }
 
-        public string DesconectarBanco()
+        public static string DesconectarBanco()
         {
             try
             {
@@ -39,19 +39,16 @@ namespace CRUDADDIN.Controller
             }
 
         }
-        public void SinalizarStatusConexao()
-        {
 
-            if (ConnectionBD.StatusConexao())
-            {
 
-            }
-            else
-            {
 
-            }
 
-        }
+
+
+
+
+
+
 
 
     }

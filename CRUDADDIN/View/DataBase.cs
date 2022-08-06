@@ -10,19 +10,11 @@ namespace CRUDADDIN
 {
     public partial class DataBase
     {
-        private void DataBase_Load(object sender, RibbonUIEventArgs e)
-        {
-            Requisicoes Req = new Requisicoes();
-            Req.SinalizarStatusConexao();
-        }
-
         private void btnConectar_Click(object sender, RibbonControlEventArgs e)
         {
             string resultado = "";
 
-            Requisicoes Req = new Requisicoes();
-            resultado = Req.ConectarBanco();
-
+            resultado = Requisicoes.ConectarBanco();
             System.Windows.Forms.MessageBox.Show(resultado);
 
         }
@@ -31,9 +23,7 @@ namespace CRUDADDIN
         {
             string resultado = "";
 
-            Requisicoes Req = new Requisicoes();
-            resultado = Req.DesconectarBanco();
-
+            resultado = Requisicoes.DesconectarBanco();
             System.Windows.Forms.MessageBox.Show(resultado);
 
         }
@@ -41,6 +31,11 @@ namespace CRUDADDIN
         private void btnConectarTabela_Click(object sender, RibbonControlEventArgs e)
         {
             
+        }
+
+        private void btnSalvarAlteracoes_Click(object sender, RibbonControlEventArgs e)
+        {
+
         }
     }
 }

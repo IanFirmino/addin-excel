@@ -72,6 +72,7 @@
             this.btnSalvarAlteracoes.Label = "Salvar Alterações";
             this.btnSalvarAlteracoes.Name = "btnSalvarAlteracoes";
             this.btnSalvarAlteracoes.ShowImage = true;
+            this.btnSalvarAlteracoes.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnSalvarAlteracoes_Click);
             // 
             // btnDescartarAlteracoes
             // 
@@ -137,7 +138,6 @@
             this.RibbonType = "Microsoft.Excel.Workbook";
             this.Tabs.Add(this.tab1);
             this.Tabs.Add(this.tab2);
-            this.Load += new Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler(this.DataBase_Load);
             this.tab1.ResumeLayout(false);
             this.tab1.PerformLayout();
             this.group1.ResumeLayout(false);
